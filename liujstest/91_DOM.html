@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>91_DOM</title>
+
+</head>
+
+<body>
+    <button id="btn">我是一个按钮</button>
+    <script type="text/javascript">
+        /**
+         * 浏览器已经为我们提供文档节点对像，这个对像就是window属性，可以在页面上直接使用
+         * 文档节点代表的是整个页面，我们可以通过文档节点来获取页面中的任意元素
+        */
+        console.log(document);
+
+        //获取到页面中的按钮元素
+        var btn = document.getElementById("btn");
+        console.log(btn);
+
+        //修改btn的文本
+        btn.innerHTML = "我是一个按钮修改后的文本";
+
+    </script>
+</body>
+
+</html>

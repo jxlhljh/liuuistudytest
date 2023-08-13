@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>85_正则表达式</title>
+  <script type="text/javascript">
+    /**
+     * 正则表达式用于定义一些字符串的规则：
+     *    计算机可以根据正则表达式，来检查一个字符串是否符合规则
+     *    获取字符串中符合规则的内容提取出来
+    */
+
+    //创建正则表达式的对象
+    /**
+     * 语法：
+     *    var 变量 = new RegExp("正则表达式","匹配模式");
+     *    使用typeof检查正则对象，会返回object
+     *    在构造函数中可以传递一个匹配模式作为第二个参数
+     *      可以是：
+     *         i 忽略大小写
+     *         g 全局匹配模式
+    */
+    var reg = new RegExp("a");
+    reg = new RegExp("a","i");
+    //console.log(typeof reg);
+
+    var str = "a";
+    
+    /**
+     * 正则表达式的用法：
+     *    test()
+     *      - 使用这个方法可以用来检查一个字符串是否符合正则表达式的规则
+     *        如果符合则返回true,否则返回false.
+     * 
+    */
+    
+    console.log(reg.test(str));
+    console.log(reg.test("bcbc"));
+    console.log(reg.test("abcbc"));
+    console.log(reg.test("Abcbc"));
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

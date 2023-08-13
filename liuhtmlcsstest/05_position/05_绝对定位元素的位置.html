@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_绝对定位元素的位置</title>
+    <style>
+        .box1 {
+            width: 500px;
+            height: 500px;
+            background-color: #bfa;
+            position: relative;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color:  orange;
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        /**
+            水平布局：
+                left + margin-left + border-left + padding-left + width + 
+                right + margin-right + border-right + padding-right
+            
+                - 当开启了绝对定位后：
+                    水平方向的布局等式就需要添加left和right两个值
+                        当发生过度约束后：
+                            如果9个值中没有auto,则自动调整right值使其满足
+                            如果有auto,则自动调整auto使等式满足
+                    - 可设置auto的值：
+                        margin width left right
+                    - 如果left和right都设置了auto,则两边都自动调整
+            
+            垂直布局：
+                需要满足等式
+                top + margin-top + border-top + padding-top + height + 
+                + margin-top + border-top + padding-top  
+        */
+
+
+
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2">2</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>72_数组的方法.html</title>
+    <script type="text/javascript">
+
+        //创建一个数组
+        var arr = ["孙悟空","沙和尚","猪八戒"];
+
+        //push向数组中末尾添加一个或多个元素，并返回新的长度
+        var count = arr.push("pigs", "goats", "sheep", "cows");
+
+        console.log(count);
+        console.log(arr);
+
+        //pop方法删除数组中的最后一个元素并返回，数组同时将改变,删除数组的最后一个元素
+        var obj = arr.pop();
+        console.log(obj);
+        console.log(arr);
+
+        //unshift向数组的第一个位置上添加一个或多个新元素
+        //插入元素后，其他元素的索引也会变化
+        obj = arr.unshift("Strawberry","Banana");
+        console.log(obj);
+
+        //删除数组中的第一个元素，并作为返回值返回
+        obj = arr.shift();
+        console.log(obj);
+
+        
+        
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

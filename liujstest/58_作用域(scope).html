@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>58_作用域(scope).html</title>
+    <script type="text/javascript">
+
+        /**
+         * 作用域
+         *  - 作用域指一个变量的作用的范围
+         *  - 在JS中两种作用域
+         *      1.全局作用域
+        *           - 直接编写在script标签中的JS代码，都在全局作用域
+        *           - 全局作用域在页面打开时创建，在页面关闭时销毁
+        *           - 在全局作用域中有一个全局对象window
+        *               它代表的是一个浏览器容器，它由浏览器创建，我们可以直接使用
+        *           - 在全局作用域中：
+        *               创建的变量都会作为window对象的属性保存
+        *               创建的函数都会作为window对象的方法保存
+        *       
+        *       2.函数作用域
+        */
+
+        var a = 20;
+        var b = 30;
+        // console.log(window.b);
+
+        function fun(){
+            console.log("我是fun函数");
+        }
+
+        // window.fun();
+        window.alert("hello");
+
+        /**
+         * 变量的声明提前
+         *  - 使用var关键字声明的变量，会在所有的代码执行之前被声明 
+         *  - 不使用var关键字声明的变量，不会声明提前
+         * 
+         * 函数的声明提前
+         *  - 使用函数声明形式创建的函数function 函数(){}
+         *      它会在所有的代码执行之前就会创建。所以可以在函数声明前就使用
+         *  - 使用函数表达式声明的函数不会声明提前
+         *  
+        */
+        console.log("c = " + c);
+
+        //相当于var c; c=123;//var c会在代码的最上面，相当于申明提前
+        var c = 123;
+
+        /**
+         * 
+        */
+        fun2();
+
+        //函数声明会提前
+        function fun2(){
+            console.log("我是第二个函数");
+        }
+
+        //函数声明不会提前
+        var fun3 = function(){
+            console.log("我是第三个函数");
+        };
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

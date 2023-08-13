@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>73_数组的遍历.html</title>
+    <script type="text/javascript">
+
+        //创建一个数组
+        var arr = ["孙悟空","沙和尚","猪八戒"];
+
+        //遍历数组
+        // for(var i=0; i<arr.length; i++){
+        //     console.log(arr[i]);
+        // }
+
+        //也可以使用forEach进行遍历，接收一个函数参数,但forEach只支持IE8以上的浏览器，如果要兼容IE8，还是使用for
+        /**
+         * 第一个参数：数组的数据
+         * 第二个参数：索引
+         * 第三个参数：数组本身的这个对象
+        */
+        arr.forEach(function(value,index,arr){
+            console.log(value);
+            console.log(index);
+            console.log(arr);
+        });
+
+        //通过map方法也是可以遍历的
+        arr.map(item => {
+            console.log("---> " +item);
+        });
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

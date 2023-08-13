@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+        audio 标签用于引入一个外部的音频文件。
+            默认情况下，引入时用户不能控制，
+
+        属性：
+            controls 是否允许用户控制
+            autoplay 是否自动播放,设置了会自动播放，目前大部分浏览器不会自动播放
+
+    -->
+    <!-- <audio src="source/1.wav" controls autoplay loop></audio> -->
+    <audio controls autoplay loop>
+        对不起，你的浏览器不支持播放音频。
+        <source src="./source/1.wav">
+        <source src="./source/1.ogg">
+        <embed src="./source/1.mp3" type="audio/mp3" width="300" height="200">
+    </audio>
+
+    <!--
+        使用video标签引入视频
+            - 使用方式和audio基本上一样的
+    -->
+    <video controls>
+        <source src="">
+        <embed src="" type="">
+    </video>
+
+</body>
+
+</html>

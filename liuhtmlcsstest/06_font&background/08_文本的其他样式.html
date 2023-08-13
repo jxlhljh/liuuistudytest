@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_文本的其他样式.html</title>
+    <style>
+        .box1{
+            font-size: 50px;
+            /*
+                设置文本修饰方式
+                    可选值：
+                        none 默认什么都没有
+                        underline 下划线
+                        line-through 中划线
+                        overline 上划线
+
+            */
+            text-decoration: overline;
+        }
+
+        .box2 {
+            /**
+                white-space
+                    normal 默认值。默认处理方式。文本自动处理换行。假如抵达容器边界内容会转到下一行 
+                    nowrap  :　 强制在同一行内显示所有文本，直到文本结束或者遭遇 br 对象。
+                    pre: 保留空白
+            */
+            white-space: nowrap;
+            overflow: hidden;
+            /* 当对象内文本溢出时显示省略标记(...)  */
+            text-overflow: ellipsis;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">
+        今天天气真不错！
+    </div>
+
+    <div class="box2">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis sunt culpa earum et architecto eos nisi ratione sapiente omnis officia nulla, aliquid corrupti recusandae similique? Expedita facere fuga laboriosam incidunt.
+    
+        aa
+    </div>
+
+</body>
+</html>

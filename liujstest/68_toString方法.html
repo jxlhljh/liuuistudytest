@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>68_toString方法.html</title>
+    <script type="text/javascript">
+
+        function Person(){
+
+        }
+
+        Person.prototype.toString = function(){
+            return "修改后的toString()方法";
+        }
+
+        var p = new Person();
+
+        //默认的toString()返回[object Object],如果需要改变，可以在原型对象中重写一个toString()方法
+        console.log(p.toString());
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

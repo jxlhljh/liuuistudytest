@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /*
+            :link 没访问过的链接
+        */
+        a:link{
+            color: red;
+            font-size: 12px;
+        }
+
+        /*
+            :visited 访问过的链接
+            由于隐私的原因,访问过的链接只能修改链接的颜色
+        */
+        a:visited{
+            font-size: 20px;
+            color: orange;
+        }
+
+        /*
+            :hover 用于表示移入时的状态
+        */
+        a:hover{
+            color: green;
+            font-size: 50px;
+        }
+
+        /*
+            :active 用于表示点击时不松开鼠标时的状态
+        */
+        a:active{
+            color: black;
+            font-size: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!--
+        1.没有访问过的链接
+        2.访问过的链接
+        3.
+    -->
+
+    <a href="http://www.baidu.com">访问过的链接</a>
+    <br>
+    <br>
+    <a href="http://www.qq.com">没访问过的链接</a>
+
+</body>
+</html>

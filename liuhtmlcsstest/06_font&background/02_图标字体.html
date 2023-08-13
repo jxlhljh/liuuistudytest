@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_图标字体.html</title>
+    <link rel="stylesheet" href="./fa/css/all.css">
+    <style>
+        .fa-frog{
+            font-size: 60px;
+            color: green;
+        }
+
+        li{
+            list-style: none;
+        }
+
+        /**
+            写法二：伪元素before前写：
+            content: 需要加一个反斜杆
+            font-family: 去all.css里面找
+            font-weight: 设置成900后就是实心的字体，可以去掉试试看看效果，是空心的
+        */
+        li::before{
+            content: '\f164';
+            font-family: 'Font Awesome 6 Free';
+            color: blue;
+            font-weight: 900;
+            padding-right: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+
+        fontawesome使用步骤
+            1.下载 https://fontawesome.com/
+            2.解压
+            3.将css和webfonts文件夹引入到网页中
+            4.使用图标字体
+                - 直接通过类名来使用图标字体
+                    分两种写法：fas或fab
+                    class="fas fa-bell"
+                    class="fab fa-adn"
+
+    -->
+
+    <i class="fas fa-bell"></i>
+    <i class="fab fa-adn"></i>
+    <i class="fas fa-frog"></i>
+
+    <ul>
+        <li>一</li>
+        <li>二</li>
+        <li>三</li>
+        <li>四</li>
+    </ul>
+
+    <!--写法三：实体的写法  -->
+    <i class="fas">&#xf164;</i>
+</body>
+</html>

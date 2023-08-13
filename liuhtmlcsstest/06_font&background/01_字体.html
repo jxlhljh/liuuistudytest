@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_字体.html</title>
+    <style>
+
+        /**
+            @font-face可以直接将服务器上的字体提供给用户使用
+            问题：
+                1.加载速度
+                2.版权
+        */
+        @font-face {
+            /* 指定字体的名字 */
+            font-family: 'myfont';
+            /** 
+                服务器上字体的路径
+                format属性：可选
+            */
+            src: url("./font/xingxingyueliangti.ttf") format("truetype");
+        }
+
+        p {
+            /* 
+            字体相关的样式 
+                color: 设置字体的颜色
+                font-size: 字体大小
+                    和font-size相关的单位
+                        em 相对于当前元素的font-size
+                        rem 相对于根元素的font-size
+                font-family: 字体族（字体的样式）
+                    serif 衬线字体
+                    sans-serif 非衬线字体
+                    monospace 等宽字体
+                可以同时指定多个字体，用逗号分隔
+
+
+            */
+            color: red;
+            font-size: 40px;
+            /* font-family: '微软雅黑'; */
+            /* font-family: sans-serif; */
+            font-family: 'myfont';
+        }
+    </style>
+</head>
+<body>
+    <p>
+        今天天气真不错~ Hello How are you!
+    </p>
+</body>
+</html>

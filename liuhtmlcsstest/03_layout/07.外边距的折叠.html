@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /*
+            垂直外边距的重叠
+                - 相邻的垂直外边距重叠后
+                    兄弟元素：
+                        - 兄弟元素垂直外边距，以大的外边距为准进行重叠
+                        - 特殊情况：
+                            一正一负时，取两者的和
+                            如果两者都是取负，则取两者的绝对值较大的为准
+                    
+                        - 兄弟元素的重叠一般都是有利的，无需太多处理
+                
+                    - 父子元素重直外边距
+                        - 子元素的垂直外边距会传递给父元素（上外边距）
+                        - 父子元素的垂直外边距会影响页面的布局，需要处理
+                            - 加上border的1像素后，就不会影响了
+
+
+
+
+        */
+
+        .box1, .box2{
+
+            width: 200px;
+            height: 200px;
+
+        }
+
+        .box1{
+            
+            background-color: #bfa;
+            /*设置一个下边距*/
+            margin-bottom: 100px;
+        }
+
+        .box2{
+            background-color: orange;
+            /*设置一个上边距*/
+            margin-top: 50px;
+        }
+
+        .outer{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            padding-top: 100px;
+            /* border: 1px solid red; */
+        }
+
+        .inner{
+            margin-top: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- <div class="box1"></div>
+    <div class="box2"></div> -->
+
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+    
+</body>
+</html>

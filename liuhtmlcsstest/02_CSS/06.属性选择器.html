@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <style>
+        /*
+            [属性名] 选择含有属性名的元素
+        */
+        /* p[title]{
+            color: orange;
+        } */
+
+        /*
+            [attr=value]
+            [属性名="abcdef"] 比如：选择属性title的值为abcdef的元素
+                属性值可以加双引号也可以不加
+        */
+        /* p[title=abcdef]{
+            color: green;
+        } */
+
+        /*
+            [attr^=value]
+                元素包含以value开头的attr属性
+            [attr$=value]
+                元素包含以value结尾的attr属性
+            [attr*=value]
+
+        */
+        /* p[title ^= abc]{
+            color: red;
+        } */
+        
+        /* p[title $= abc]{
+            color: red;
+        } */
+
+        p[title *= abc]{
+            color: red;
+        }
+
+    </style>
+<body>
+
+    <h1>我是标题</h1>
+    <p title="dabc">少小离家老大回</p>
+    <p title="abcdeabcf">段luo2</p>
+    <p>段luo3</p>
+    <p>段luo4</p>
+    <p>少小离家老大回</p>
+    <p>段luo6</p>
+    <p>段luo7</p>
+
+</body>
+
+</html>

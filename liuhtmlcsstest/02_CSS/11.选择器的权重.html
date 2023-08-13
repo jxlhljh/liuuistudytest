@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* #box1{
+            color: blue;
+        }
+
+        div#box1{
+            color: grey;
+        }
+
+        .red{
+            color: red;
+        }
+
+        div{
+            color: green;
+        } */
+
+        /*
+            样式冲突：
+                - 通过不同的选择器，选择相同的元素，设置不同的样式
+            发生样式冲突时，样式由选择器的优先级来决定
+
+            选择器的权重由大到小：
+                内联样式  1000
+                id选择器  100
+                类和伪类选择器 10
+                元素选择器 1
+                通配选择器 0
+                继承的样式 没有优先级，最小
+            
+            比较优先级时。需要将所有的选择器优先级相对计算，然后比较，最后优先级最高的就显示,(分组选择器单独计算)
+                - 比如div#box1 和 #box1 一个计算出来101权重，另一个是100，因此101的先显示
+                - 选择器的累加，不会超高其最大的选择器，比如11个类选择器迭加，也不会超过id选择器的权重
+                - 如果优先级计算相等，则优先使用靠下面的
+
+            !important 最高优先级，慎用，一般情况下都不用。
+
+        */
+
+        span{
+            font-size: 10px;
+        }
+
+        div{
+            font-size: 50px;
+        }
+
+</style>
+</head>
+<body>
+    
+    <div id="box1" class="red">我是一个div <span>我是div中的span元素</span></div>
+
+</body>
+</html>

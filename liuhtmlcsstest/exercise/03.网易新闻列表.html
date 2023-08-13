@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易新闻列表</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+
+        body{
+            background-color: #FFFFFF;
+        }
+
+        .news-wrapper{
+            /*设置宽度*/
+            width: 300px;
+            /*设置居中,上边距50像素*/
+            margin: 50px auto;
+            /*设置上边距*/
+            border-top: 1px solid #DDDDDD;
+        }
+
+        .news-wrapper .news-title{
+            /*设置高度*/
+            height: 41px;
+            /*设置行高*/
+            line-height: 41px;
+            font-size: 16px;
+            font-weight: bold;
+            border-top: 1px #f34540 solid;
+            /*将元素设置为行内块元素，这样宽度就不是占一行宽了*/
+            display: inline-block;
+            /*将元素上边距设置为-1像素，为了盖住上面的边框*/
+            margin-top: -1px;
+        }
+
+        .news-wrapper .news-title a {
+            color: rgb(64, 64, 64);
+        }
+
+        .news-wrapper .news-title a:hover {
+            color: rgb(243, 69, 64);
+        }
+
+        .news-wrapper .news-image{
+            height: 150px;
+            width: 300px;
+        }
+
+        /*设置图片中的背景文字的样式*/
+        .news-wrapper .news-image .news-image-bgword{
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            margin-top: -30px;
+            margin-left: 40px;
+        }
+
+        /*新闻列表的样式*/
+        .news-list {
+            font-size: 14px;
+            margin-top: 12px;
+        }
+
+        .news-list .news-item{
+            height: 30px;
+            line-height: 30px;
+            font-family: 宋体;
+            padding-left: 15px;
+            font-size: 14px;
+            position: relative;
+        }
+
+        .news-list .news-item a::before{
+            position: absolute;
+            content: '';
+            left: 6px;
+            top: 17px;
+            width: 5px;
+            height: 5px;
+            display: block;
+            background-color: rgba(102, 102, 102, 0.2);
+            margin-top: -5px;
+        }
+
+        .news-list .news-item a{
+            color: rgb(102, 102, 102);
+        }
+
+        .news-list .news-item a:hover{
+            color: rgb(243, 69, 64);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="news-wrapper">
+        <h2 class="news-title">
+            <a href="javascript:;">房产</a>
+            <i> · </i>
+            <a href="javascript:;">家居</a>
+        </h2>
+        <div class="news-image">
+            <a href="#">
+                <img src="./img/03/1.jpg" alt="失落的朱村 房价跌回2018">
+                <div class="news-image-bgword">失落的朱村 房价跌回2018</div>
+            </a>
+        </div>
+        <ul class="news-list">
+            <li class="news-item">
+                <a href="#">＂逆境学中海＂ 看中海管理层都说了什么？</a>
+            </li>
+            <li class="news-item">
+                <a href="#">北京城市副中心松绑限购，释放什么信号？</a>
+            </li>
+            <li class="news-item">
+                <a href="#">美女把客厅爆改成影院 再也不用费钱出去看</a>
+            </li>
+            <li class="news-item">
+                <a href="#">8个好友抱团搬到福建山村 住土屋过低物欲生</a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>

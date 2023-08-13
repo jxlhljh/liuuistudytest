@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17_其他进制的数字.html</title>
+    <script type="text/javascript">
+
+        var a = 123;
+
+        /*
+            在js中，如果需要表示16进制的数字，则需要以0x开头
+                如果表示8进制的数据，则以0开头
+                如果表示二进制的数字，则以0b开头，但不是所有的浏览器都支持
+
+        */
+
+        a = 0x10;
+        a = 0xff;
+        a = 0xcafe;
+
+        a = 070;
+
+        a = 0b10;
+
+        /*
+            有些浏览器会将070当8进制进行转换，有些会当成10进制进行转换。
+            可在parseInt函数中传递第二个参数，表示以第二个参数的进制进行转换
+            parseInt("070",10);
+        */
+        a = "070";
+        a = parseInt(a);
+        a = parseInt(a,10);
+        console.log(a);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

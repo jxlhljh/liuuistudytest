@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>54_立即执行函数.html</title>
+    <script type="text/javascript">
+        /**
+         * 函数对象：
+         *  立即执行函数
+         *      函数定义完，立即被调用，这种函数叫做立即执行函数
+         *      立即执行函数往往只会执行一次 
+        */
+        // (function(){
+        //     alert("我是一个匿名函数~~~~");
+        // })();
+        (function(a,b){
+            alert("我是一个匿名函数~~~~" + (a+b));
+        })(1,2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

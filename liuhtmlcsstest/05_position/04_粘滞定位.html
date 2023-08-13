@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_粘滞定位.html</title>
+    <style>
+
+        /*
+            粘滞定位
+                - 将元素的position属性设置为sticky则开启了粘滞定位
+                - 粘滞定位与相对定位的特点是一样的
+                    不同的是粘滞定位到时到设置的位置后就不再动了
+        */
+
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 20px;
+            background-color: #bfa;
+            position: sticky;
+            left: 50px;
+            top: 50px;
+        }
+
+        .box3 {
+            width: 200px;
+            height: 1000px;
+            background-color: red;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+/**
+解决图片默认是基线对齐的缝隙
+*/
+img{
+    vertical-align: middle;
+}

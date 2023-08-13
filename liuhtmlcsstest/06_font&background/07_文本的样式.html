@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_文本的样式.html</title>
+    <style>
+        div.test1{
+            width: 500px;
+            border: 1px red solid;
+
+            /**
+                text-align: 文本的对齐方式
+                    可选值：
+                        left 左对齐
+                        right 右对齐
+                        center 居中对齐
+                        justify 两端对齐
+            */
+            text-align: justify;
+        }
+
+        div.test2{
+
+            width: 500px;
+            border: 1px red solid;
+
+            font-size: 50px;
+
+        }
+
+        .test2 span {
+            font-size: 20px;
+            border: 1px green solid;
+
+            /**
+                垂直对齐：vertical-align
+                    baseline 默认
+                    top 顶部对齐
+                    bottom 底部对齐
+                    middle 居中对齐
+                    
+            */
+            vertical-align: middle;
+        }
+
+        div  {
+            border: 1px solid red;
+        }
+
+        div img {
+            
+            /* 通过vertical-align将图片下边默认的缝隙去掉，可以注解掉下面的代码看不设置之前是什么效果 */
+            vertical-align: top;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="test1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, iste mollitia deserunt excepturi blanditiis aut magni quos maiores assumenda omnis. Magnam qui illum vitae commodi eligendi neque quibusdam est possimus?
+    </div>
+    <div class="test2">
+        今天天气<span>真不错</span>！
+    </div>
+
+    <div>
+        <img width="300px" src="imgs/1.jpg" alt="测试">
+    </div>
+    
+
+</body>
+</html>

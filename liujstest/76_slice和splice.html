@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>76_slice和splice.html</title>
+    <script type="text/javascript">
+
+        /**
+         * slice()
+         *  类似取子数组：
+         *  不会修改原数组,不包含结尾的参数位置的元素
+         * 
+         * splice()
+         *  会修改原数组
+         *  splice(start)
+         *  splice(start, deleteCount)
+         *  splice(start, deleteCount, item1) 有item1参数时说明是
+         *  splice(start, deleteCount, item1, item2, itemN)
+        */
+
+        const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+        console.log(animals.slice(2));
+        // expected output: Array ["camel", "duck", "elephant"]
+
+        console.log(animals.slice(2, 4));
+        // expected output: Array ["camel", "duck"]
+
+        console.log(animals.slice(1, 5));
+        // expected output: Array ["bison", "camel", "duck", "elephant"]
+
+        console.log(animals.slice(-2));
+        // expected output: Array ["duck", "elephant"]
+
+        console.log(animals.slice(2, -1));
+        // expected output: Array ["camel", "duck"]
+
+        console.log(animals.slice());
+        // expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
+
+        console.log(animals);
+
+        const months = ['Jan', 'March', 'April', 'June'];
+        months.splice(1, 0, 'Feb');
+        // inserts at index 1
+
+        console.log(months);
+        // expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+        months.splice(4, 1, 'May');
+        // replaces 1 element at index 4
+        console.log(months);
+        // expected output: Array ["Jan", "Feb", "March", "April", "May"]
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

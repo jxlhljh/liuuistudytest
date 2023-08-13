@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            border: 10px solid red;
+
+            /*
+                内边距：内容区与边框之间的距离
+                    - 一共有四个方贡的内边距
+
+                - 内边距会影响盒子大小
+                - 背景颜色会延伸到内边距
+
+                一个盒子的可见块大小，由内容区、内边距、边框三部分加起来，一起计算
+
+            */
+            padding-top: 100px;
+            padding-right: 100px;
+            padding-bottom: 100px;
+            padding-left: 100px;
+
+            /*
+                简写：和border类似，上右下左
+            */
+            padding: 10px 20px 30px 40px;
+
+        }
+
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+        }
+  
+    </style>
+</head>
+<body>
+    
+    <div class="box1">
+        <div class="inner"></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22_逻辑运算符.html</title>
+    <script type="text/javascript">
+
+        /*
+            ! 非
+                - !可以用来对一个值进行非运算
+                - 非运算就是对一个布尔值进行取反运算
+                - 如果对非布尔值进行运算，则会先转换为布尔值后再进行运算
+                    所以可以利用其特点，将非布尔值进行取两次反转换为布尔值  
+            && 与
+                - && 可以对符号两侧的值进行与运算并返回结果
+                - 运算规则：
+                    - 两个值中只要有一个值为false，即返回false
+                    - 两个值都是true才返回true
+
+                对于非布尔值的运算，会先将其转换为布尔值后再运算,并且返回原值
+                如果第一个是true,则返回后面的一个，如123 && 456 --> 456;  123 && 0 --> 0
+                如果第一个为false，则返回前面的一个,如 0 && 456 --> 0;
+
+
+            || 
+                - 运算规则：
+                    - 两个值中只要有一个值为true，即返回true
+
+                对于非布尔值的运算，会先将其转换为布尔值后再运算,并且返回原值
+                如果第一个是true,则返回前面的一个，如123 || 456 --> 123;
+                如果第一个为false，则返回后面的一个,如 0 && 456 --> 456;
+
+            
+        */ 
+
+        var a = true;
+        console.log("a = " + a);
+
+        a = "hello";
+        a = !!a;
+        console.log("a = " + a);
+
+        var result = true && false;
+        console.log("result = " + result);
+
+        result = 123 && 0;
+        console.log("result = " + result);
+
+        result = 0 || 456;
+        console.log("result = " + result);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

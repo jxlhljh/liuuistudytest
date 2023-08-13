@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12.轮廓阴影圆角</title>
+    <style>
+
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            /* border: 100px solid red; */
+            /*
+                outline 轮廓的使用和border一样，只是outline不占用空间，不会挤其他元素
+            */
+            /* border: 100px solid red; */
+            
+
+            /*
+                border-radius 设置圆角
+
+            */
+            /* border-radius: 100px;
+            border-radius: 25% 10%;
+            border-radius: 10% 30% 50% 70%;
+            border-radius: 10% / 50%;
+            border-radius: 10px 100px / 120px; */
+            /* border-top-left-radius: 100px;
+            border-top-right-radius: 100px;
+            border-bottom-left-radius: 100px;
+            border-bottom-right-radius: 100px; */
+
+            /*
+                用来设置阴影
+                    - 第一个值：水平偏移量
+                    - 第二个值：垂直偏移量
+                    - 第三个值：阴影的半径
+                    - 第四个值：阴影的颜色
+            */
+            box-shadow: 12px 12px 2px 0px rgba(0, 0, 0, .5);
+
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="box1"></div>
+    <span>1234</span>
+
+</body>
+</html>

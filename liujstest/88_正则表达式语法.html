@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>88_正则表达式语法.html</title>
+    <script type="text/javascript">
+        /**
+         * 创建一个正则表达式检查一个字符串中是否含有aaa
+        */
+        var reg = /aaa/;
+        console.log(reg.test("aaabc"));
+
+        /**
+         * 量词
+         *  - 通过量词可以设置一个内容出现的次数
+         *  - 量词只对它前边的一个内容起作用
+         *  - {n} 正好出现n次
+         *  - {m,n} 出现m到n次
+         *  - {m,} 出现m次以上
+         *  - + 至少出现一次,相当于{1,}
+         *  - * 出现0次或多次,相当于{0,}
+         *  - ? 出现0次或1次,相当于{0,1}
+         */
+        reg = /(ab){3}/;
+        reg = /a{3}/;
+        reg = /ab*c/;
+        reg = /ab?c/;
+        console.log(reg.test("abababc"));
+
+        /**
+         * 检查一个字符串中是否以a开头
+         *  - ^ 以某个内容开头
+         *  - $ 以某个内容结尾
+         */
+        reg = /^a/;
+        reg = /c$/;
+        console.log(reg.test("babc"));
+
+        /**
+         * 如果在正则表达式中同时使用^和$,那么这个正则表达式只能匹配一个内容
+         */
+        reg = /^a$/;
+        console.log(reg.test("aa")); //结果为false
+
+        /**
+         * 创建一个正则表达式,检查一个字符串是否是一个合法手机号
+         *  手机号的规则:
+         *      1. 一定是11位
+         *      2. 第一位是1
+         *      3. 第二位是3,4,5,6,7,8中的一个
+         *      4. 后面9位是0-9中的任意一个数字
+        */
+        reg = /^1[345678]\d{9}$/;
+        console.log(reg.test("18028611111"));
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

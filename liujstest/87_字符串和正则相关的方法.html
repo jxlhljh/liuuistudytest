@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>字符串和正则相关的方法</title>
+    <script type="text/javascript">
+        var str = "1a2b3c4d5e6f7g8h9i";
+        /**
+         * split()方法
+         *  - 作用：将一个字符串按照指定的分隔符进行分割，返回一个数组
+         *  - 方法中可以传递一个正则表达式作为参数，这样方法将会按照正则表达式去分割字符串
+        */
+        var arr = str.split("c");
+        /**
+         * 根据任意字符串进行分割
+        */
+        arr = str.split(/[A-z]/);
+        console.log(arr);
+
+        /**
+         * search()方法
+         *  - 作用：在一个字符串中搜索指定的字符串，
+         *      如果搜索到了，则返回字符串出现的索引。如果没有搜索到，则返回-1
+         *  - 方中可以传递一个正则表达式作为参数，这样方法将会按照正则表达式去搜索字符串
+         *  - search()方法只会找到一个符合条件的内容，就会停止检索,即使设置了全局匹配模式
+        */
+
+        var index = str.search("2b3cd");
+        console.log(index);
+
+        /**
+         * 搜索串中是否含有abc或adc或aec
+         */
+        str = "bsabcdefg";
+        index = str.search(/a[bde]c/);
+        console.log(index);
+
+        /**
+         * match()方法
+         *  - 作用：可以根据正则表达式，从一个字符串中将符合条件的内容提取出来
+         *  - 默认情况下，match()方法只会找到一个符合条件的内容，就会停止检索
+         *      我们可以设置正则表达式的全局匹配模式，这样就可以找到所有符合条件的内容
+         *      可以为一个正则表达式设置多个匹配模式，且顺序不影响结果
+         *  - match()方法会将匹配到的内容封装到一个数组中返回,即使只查询到一个结果
+         */
+        str = "1a2b3c4d5e6f7g8h9i";
+        var result = str.match(/[A-z]/);
+        console.log(result);
+
+        result = str.match(/[A-z]/ig);
+        console.log(result);
+        console.log(result[0]);
+        
+        /**
+         * replace()方法
+         *  - 作用：可以将一个字符串中的指定内容替换成新的内容
+         *  - 参数：
+         *      1. 要被替换的内容，可以是一个字符串，也可以是一个正则表达式
+         *      2. 要替换成的新内容，可以是一个字符串，也可以是一个函数
+         *  - 默认只会替换第一个
+         * - 如果使用正则表达式作为第一个参数，可以设置全局匹配模式，这样就会替换所有符合条件的内容
+         */
+        str = "1a2b3c4d5e6f7g8h9i";
+        var newStr = str.replace(/[A-z]/,"*");
+        console.log(newStr);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

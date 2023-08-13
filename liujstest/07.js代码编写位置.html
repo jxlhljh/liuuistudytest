@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07.js代码编写位置</title>
+
+    <!--
+        可以将js写在外部文件用，使用script标签引入
+        外部引入的js文件，可以达到复用的效果和目的。
+
+        js代码是从上到下执行。
+
+    -->
+    <script type="text/javascript" src="./js/test.js"></script>
+    <script type="text/javascript">
+
+        /*
+            可以将js代码写在javascript标签中，
+        */
+        alert("我是Javascript标签中的代码");
+
+    </script>
+</head>
+<body>
+    
+    <!--
+        可以将js代码写在标签属性的onclick属性上，
+        当点击时会执行js代码
+
+        不推荐写在标签属性中,结构与行为耦合
+
+    -->
+    <button onclick="alert('点我一下');">点我一下试试</button>
+
+    <!--
+        可以将js代码写在超链接的href属性中，
+    -->
+    <a href="javascript:alert('也点我一下看看效果.');">也点我一下试试</a>
+
+</body>
+</html>

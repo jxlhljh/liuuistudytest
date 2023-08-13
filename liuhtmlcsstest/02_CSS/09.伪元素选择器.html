@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        p{
+            font-size: 20px;
+        }
+
+        /*
+            伪元素表示页面中一些特殊的并不真实存在的元素，表示特殊的状态
+            使用::开头
+        */
+
+        /*
+            ::first-line 块元素的第一行
+            ::first-letter 表示第一个字母
+            ::before 选中元素的最前面，一般用于加上一些自定义的内容，如图标和文字
+            ::after 表示元素的结尾位置
+                - before和after需要结合content来使用，不然是看不见的
+            ::selection 表示选中的内容
+        */
+        /* p::first-line{
+            color: orange;
+        } */
+        p::first-letter{
+            font-size: 50px;
+        }
+
+        /*
+            在p的最前面加上了内容hello,并设置颜色
+        */
+        p::before{
+            content: 'hello';
+            color: pink;
+        }
+
+        P::selection{
+            color: green;
+        }
+
+        div::before{
+            content: '[';
+        }
+        div::after{
+            content: ']';
+        }
+
+    </style>
+</head>
+<body>
+
+    <q>test</q>
+    
+    <div>
+        hello world
+    </div>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero similique tempora laborum est, sed ipsam, eius illo provident molestias ut temporibus voluptates consectetur sit. Mollitia consectetur deleniti reiciendis magni debitis.
+    </p>
+
+</body>
+</html>

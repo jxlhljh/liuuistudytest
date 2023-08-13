@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>81_Date对象.html</title>
+    <script type="text/javascript">
+
+        /**
+         * Date对象
+         *  在JS中使用Date对象表示一个时间
+         * 
+         * 
+        */
+
+        //创建一个Date对象
+        //直接使用new Date()封装一个当前时间的对象
+        var d = new Date();
+        console.log(d);
+
+        //可以指定一个字符串传入构造函数
+        //格式：月/日/年 时:分:秒
+        var d2 = new Date("12/03/2016 11:10:00");
+        console.log(d2);
+
+        //Returns the day of the month (1–31) for the specified date according to local time.
+        var dateStr = d.getDate();
+        console.log(dateStr);
+
+        //Returns the day of the week (0–6) for the specified date according to local time.
+        console.log(d.getDay());
+
+        console.log(d.getFullYear());
+
+        //Returns the numeric value of the specified date as the number of milliseconds since January 1, 1970, 00:00:00 UTC. (Negative values are returned for prior times.)
+        console.log(d.getTime());
+
+        //获取当前的时间
+        var timeMs = Date.now();
+        console.log(timeMs);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

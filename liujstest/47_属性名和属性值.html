@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>47_属性名和属性值.html</title>
+    <script type="text/javascript">
+
+        var obj = new Object();
+
+        /**
+         * 向对象中添加属性值
+         * 属性名：
+         *  - 对象的属性名不强制要求标识符的命名规范，什么都可以，但还是尽量按标识符规范来用
+         *  - 如果要使用特殊的属性名，不能采用.的方式，需要使用中括号括起来,取出来也是一样
+         *      对象["属性名"]
+         *      在中括号中可以使用变量，更加灵活
+         * 
+        */
+
+        obj.name = "孙悟空";
+        obj.var = "hello";
+        obj["123"] = 1234;
+
+        var n = 1234;
+        obj[n] = 12345678;
+        console.log(obj);
+
+        /**
+         * JS对象值，可以是任意的数据类型，也可以是一个对象
+         * 
+        */
+
+        /**
+         * 通过in运算符可以判断对象中是否含有某个属性
+         * 
+        */
+        console.log("1234" in obj);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

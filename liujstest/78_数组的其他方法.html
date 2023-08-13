@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>78_数组的其他方法.html</title>
+    <script type="text/javascript">
+
+        /**
+         * concat : 连接两个数组，并返回一个新的数组，不会改变旧的两个数组的数据\
+         * 
+         * join: 将数组连接成字符串
+         * 
+         * reverse: 反转数组，会改变原来的数组
+         * 
+         * sort: 排序,会影响原数组
+         * 
+        */
+        
+        var arr1 = ["孙悟空","沙和尚","猪八戒"];
+        var arr2 = ['ant',  'camel', 'bison', 'duck', 'elephant'];
+
+        var result = arr1.concat(arr2); 
+        console.log(arr1);
+        console.log(arr2);
+        console.log(result);
+
+        //默认使用逗号进行连接
+        result = arr1.join();
+        console.log(result);
+
+        //可以指定任意的连接字符
+        result = arr1.join('-');
+        console.log(result);
+
+        //反转数据会改变原来的数组，因此打印时也看到数据变化，反转了顺序
+        console.log(arr1.reverse());
+        console.log(arr1);
+
+        console.log(arr2);
+        console.log(arr2.sort());
+        console.log(arr2);
+
+        arr2 = [5,4,3,8];
+        arr2.sort(function(a,b){
+            console.log("a =" + a);
+            console.log("b =" + b);
+            /**
+             * 如果返回值大于0，则会交换位置
+             * 如果返回值等于0，不变化
+             * 如果返回值小于0，则元素位置也不变化
+            */
+            return a-b;
+        });
+
+        console.log(arr2);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

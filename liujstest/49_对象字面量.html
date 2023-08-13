@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>49_对象字面量.html</title>
+    <script type="text/javascript">
+
+        /**
+         * 属性名如果有特殊符号，需要加上双引号
+         *  比如：{"\"name\"":"test"}
+        */
+
+        //使用对象字面量创建对象
+        var obj = {};
+
+        //可以直接指定属性
+        var obj2 = { name: "孙悟空", age: 18 };
+        obj2 = {"\"name\"":"test"};
+        console.log(obj2);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

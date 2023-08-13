@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_京东图片轮播列表.html</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+
+        /**
+            轮播列表容器
+        */
+        .image_contaner{
+            width: 590px;
+            height: 470px;
+            background-color: #bfa;
+            margin-top: 50px;
+            margin-right: auto;
+            margin-left: auto;
+            position: relative;
+        }
+
+        /**/
+        .image-list li {
+            position: absolute;
+        }
+
+        /* .image-list li:nth-child(4){
+            z-index: 2;
+        } */
+
+        .content {
+            width: 590px;
+            height: 100px;
+            background-color: #bfa;
+            margin-top: 0px;
+            margin-right: auto;
+            margin-left: auto;
+            line-height: 100px;
+            text-align: center;
+        }
+        
+        .dots{
+            position:absolute;
+            left: 100px;
+            bottom: 50px;
+        }
+
+        .dots li {
+            width: 10px;
+            height: 10px;
+            background-color: #BAC4B2;
+            /* 将背景颜色设置到内容区，边框和内边距不再有背景颜色 */
+            background-clip: content-box;
+            margin-left: 5px;
+            float: left;
+            border-radius: 50%;
+        }
+
+        .dots li{
+            border: 2px solid transparent;
+        }
+
+        .dots li:first-child{
+            border: 2px solid #BAC4B2;
+            background-color: #FEFEFE;
+        }
+
+        .dots li:hover{
+            background-color: #FEFEFE;
+            border: 2px solid #BAC4B2;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="image_contaner">
+        <ul class="image-list">
+            <li><img src="images/07/1.jpg" alt="1.jpg"></li>
+            <li><img src="images/07/2.jpg" alt="2.jpg"></li>
+            <li><img src="images/07/3.jpg" alt="3.jpg"></li>
+            <li><img src="images/07/4.jpg" alt="4.jpg"></li>
+        </ul>
+        <!--小圆点-->
+        <ul class="dots">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="content">
+        下面的内容
+    </div>
+</body>
+</html>

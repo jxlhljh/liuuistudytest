@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .outer{
+            width: 800px;
+            height: 200px;
+            background-color: orange;
+        }
+
+        .inner{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+
+
+            /*
+                元素的水平方向的布局：
+                    元素在其父元素中水平方向的位置由以下几个属性共同决定
+                        margin-left
+                        border-left
+                        padding-left
+                        width
+                        padding-right
+                        border-right
+                        margin-right
+
+                    一个元素在其父元素中，水平布局必须满足以下的等式
+                        margin-left + border-left + padding-left + width + padding-right + border-right + margin-right 
+                        = 父元素的内容宽度width(必须满足)
+                    - 如果不满足，则由margin-right自动调整，如果有属性设置了auto，则由auto的属性自动调整
+                        可以设置auto的属性有： margin-left margin-right width
+                
+                width 如果设置为了auto，则其他的auto将失效，会变成0,
+                    - 比如margin-left width都auto，这样的margin-left会变成0
+
+                如果将margin-left和margin-right都设置为auto,则元素将水平居中
+                    
+            */
+            /* margin-left: auto;
+            width: auto; */
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+
+</body>
+</html>

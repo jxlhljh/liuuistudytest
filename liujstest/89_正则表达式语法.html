@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>88_正则表达式语法.html</title>
+    <script type="text/javascript">
+
+        /**
+         * 检查一个字符串是否含有.
+         *  .表示任意字符
+         * 在正则表达式中,如果想要使用特殊字符,需要使用\转义
+         * \.表示.
+         * \\表示\
+         */
+        var reg = /\./;
+        reg = /\\/;
+        reg = new RegExp("\\.");//在字符串中,使用\转义
+        console.log(reg.test("b."));
+
+        //去除字符串中的空格
+        var str = "  hello world   ";
+        str = str.replace(/\s/g, "");
+        console.log(str);
+
+        //去除开头的空格
+        str = "  hello world   ";
+        str = str.replace(/^\s*/, "");
+        console.log(str);
+
+        //去除结尾的空格
+        str = "  hello world   ";
+        str = str.replace(/\s*$/, "");
+        console.log(str);
+
+        //去除开头和结尾的空格
+        str = "  hello world   ";
+        str = str.replace(/^\s*|\s*$/g, "");
+        console.log(str);
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

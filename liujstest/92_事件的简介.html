@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>92_事件的简介.html</title>
+</head>
+
+<body>
+    <!--
+        我们可以在事件对应的属性中设置一些代码，当事件发生时，浏览器会自动执行这些代码
+        以下行为不推荐使用，结构与行为没有分离
+    -->
+    <!-- <button id="btn" onclick="alert('按钮被点击了~')">我是一个按钮</button> -->
+    <button id="btn">我是一个按钮</button>
+    <script type="text/javascript">
+        /**
+         * 事件，就是用户和浏览器之间的交互行为，
+         * 比如，点击按钮，移动鼠标，按下键盘，关闭窗口等等
+        */
+
+        //获取到页面中的按钮元素
+        var btn = document.getElementById("btn");
+        console.log(btn);
+
+        /**
+         * 可以为按钮的对应事件属性设置一个函数，当事件发生时，浏览器会自动调用这个函数
+        */
+
+        // 绑定一个单击事件
+        btn.onclick = function () {
+            alert("绑定一个单击事件onclieck,按钮被点击了~");
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>82_Math</title>
+    <script type="text/javascript">
+
+        /**
+         * Math是一个工具类，不需要创建对象，封装了数学运算相关的属性和方法
+         *  - 比如：
+         *      Math.PI
+         * 
+        */
+
+        console.log(Math.PI);
+
+        /**
+         * abs() 可以来计算一个数的绝对值
+        */
+        console.log(Math.abs(-100));
+
+        /**
+         * ceil() 可以返回一个数向上最小的整数值,即向上取整
+        */
+        console.log(Math.ceil(0.95));
+
+        /**
+         * Math.floor： 向下取整
+        */
+        console.log(Math.floor(1.95));
+
+        /**
+         * Math.round： 四舍五入
+        */
+        console.log(Math.round(5.35));
+        console.log(Math.round(5.96));
+        
+        /**
+         * Math.random() 
+         *  - 生成随机数
+        */
+
+        //随机生成0-1之间的数
+        for(var i=0;i<100;i++){
+            console.log(Math.random());
+        }
+
+        //最大值
+        console.log(Math.max(2,3));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

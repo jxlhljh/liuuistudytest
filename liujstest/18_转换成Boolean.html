@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18_转换成Boolean.html</title>
+    <script type="text/javascript">
+
+        /*
+            转换成布尔值，使用Boolean()函数
+                - 数字 --> 布尔 
+                    - 除了0和NaN，其余的都是true
+                - 字符串 --> 布尔
+                    - 除了空串，其余的都是false
+                - null和undefined都是转换为false
+                - 对象也会转换为true
+            -
+                可以对任意值进行两次取反，转换成布尔值
+                    比如： !!a
+                
+        */
+
+        var a = 123; //true
+        a = 456; //true
+        a = 0; //false
+        a = Infinity; //true
+        a = NaN; //false
+
+        //调用Boolean()进行其他数据转换为Boolean
+        a = Boolean(a);
+
+        console.log(typeof a);
+        console.log(a);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

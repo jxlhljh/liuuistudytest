@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16_转换成number.html</title>
+    <script type="text/javascript">
+
+        /*
+            将其他的数据类型转换成Number
+                转换方式一：
+                    使用Number()函数
+                    - 字符串 --> 数字
+                        1.如果是纯数字的字符串，则直接转换成数字
+                        2.如果字符串有非数字的内容，则转换成NaN
+                        3.空串或全是空格的字符串则转换成0
+                    - 布尔值 -- >  数字
+                        转换成1或者0，true->1 false->0
+                    - Null --> 数字
+                        转换成0
+                    - undefined --> 数字
+                        转换成NaN
+
+                转换方式二：
+                    - 这种方式专门用来对付字符串
+                    - 调用parseInt()函数进行转换
+                        parseInt可以将字符串中有效的数字转换成数值类型
+
+
+
+        */
+
+        var a = "123";
+        console.log(typeof a);
+        console.log(a);
+
+        //调用Number()函数
+        a = "1abc";
+        a = Number(a);
+        console.log(typeof a);
+        console.log(a);
+
+        a = true;
+        a = Number(a);
+        console.log(typeof a);
+        console.log(a);
+
+        a = null;
+        a = Number(a);
+        console.log(typeof a);
+        console.log(a);
+
+        a = undefined;
+        a = Number(a);
+        console.log(typeof a);
+        console.log(a);
+
+        a = "123px";
+        a = parseInt(a);
+        console.log(typeof a);
+        console.log(a);
+
+        /*
+            parseFloat会把小数部分也转换出来
+        */
+        a = "123.456px";
+        a = parseFloat(a);
+        console.log(typeof a);
+        console.log(a);
+
+        /*
+            如果对非String使用parseInt()或parseFloat()
+                会先将其转换成String然后再进行强制转换   
+        */
+
+    </script>
+</head>
+<body>
+    
+
+
+</body>
+</html>
